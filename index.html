@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frank's Auto Solutions & Tire Shop in Baytown, TX - Trusted tire repair, flat tire service, state inspections, and new/used tires. 10+ years serving the community. Call (281) 421-7888">
+    <title>Frank's Auto Solutions & Tire Shop | Baytown TX | 10+ Years of Trusted Service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --navy: #1a365d;
+            --navy-light: #2c5282;
+            --cream: #faf9f7;
+            --white: #ffffff;
+            --accent: #f6ad55;
+            --accent-dark: #dd6b20;
+            --gray-100: #f7f7f7;
+            --gray-300: #d4d4d4;
+            --gray-600: #525252;
+            --gray-900: #171717;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--gray-900);
+            background: var(--white);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            line-height: 1.15;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-300);
+            transition: box-shadow 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .logo span {
+            color: var(--accent-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--gray-600);
+        }
+
+        .nav-links a:hover {
+            color: var(--navy);
+        }
+
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 1rem;
+        }
+
+        .nav-phone i {
+            color: var(--accent-dark);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--navy);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(to right, rgba(26, 54, 93, 0.92), rgba(26, 54, 93, 0.85)),
+                        url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1920&q=80') center/cover no-repeat;
+            padding: 120px 24px 100px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--white);
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 36px;
+            max-width: 520px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--navy);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.4);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--white);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Sora', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 4px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: var(--cream);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent-dark);
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+        }
+
+        .service-item {
+            background: var(--white);
+            padding: 32px;
+            border-radius: 8px;
+            border: 1px solid var(--gray-300);
+            transition: border-color 0.2s ease;
+        }
+
+        .service-item:hover {
+            border-color: var(--navy);
+        }
+
+        .service-item h3 {
+            font-size: 1.25rem;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .service-item p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 120px 0;
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            color: var(--navy);
+            margin-bottom: 24px;
+        }
+
+        .about-content p {
+            color: var(--gray-600);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .pull-quote {
+            position: relative;
+            padding: 40px;
+            background: var(--navy);
+            border-radius: 12px;
+        }
+
+        .pull-quote::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-family: 'Sora', sans-serif;
+            font-size: 8rem;
+            color: var(--accent);
+            opacity: 0.3;
+            line-height: 1;
+        }
+
+        .pull-quote p {
+            position: relative;
+            font-family: 'Sora', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.4;
+            z-index: 1;
+        }
+
+        .pull-quote cite {
+            display: block;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+            font-style: normal;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 120px 0;
+            background: var(--navy);
+        }
+
+        .testimonials .section-label {
+            color: var(--accent);
+        }
+
+        .testimonials .section-title {
+            color: var(--white);
+        }
+
+        .testimonials .section-subtitle {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .testimonial-card {
+            padding: 40px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .testimonial-card:nth-child(5) {
+            grid-column: 1 / -1;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .testimonial-quote {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-quote::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -20px;
+            font-family: 'Georgia', serif;
+            font-size: 4rem;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .testimonial-quote p {
+            font-size: 1.15rem;
+            color: var(--white);
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Location Section */
+        .location {
+            padding: 100px 0;
+            background: var(--cream);
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--gray-300);
+            height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .location-info h3 {
+            font-size: 1.75rem;
+            color: var(--navy);
+            margin-bottom: 24px;
+        }
+
+        .location-info p {
+            color: var(--gray-600);
+            margin-bottom: 24px;
+        }
+
+        .info-block {
+            margin-bottom: 32px;
+        }
+
+        .info-block h4 {
+            font-size: 1rem;
+            color: var(--navy);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--gray-300);
+            color: var(--gray-600);
+        }
+
+        .hours-list li.closed {
+            color: var(--gray-900);
+            font-weight: 600;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .contact-row i {
+            color: var(--accent-dark);
+            width: 20px;
+        }
+
+        .contact-row a {
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .contact-row a:hover {
+            color: var(--accent-dark);
+        }
+
+        /* Contact Form */
+        .contact {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .contact-form h2 {
+            font-size: 2rem;
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+
+        .contact-form > p {
+            color: var(--gray-600);
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            background: var(--white);
+            transition: border-color 0.2s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--navy);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            margin-top: 8px;
+        }
+
+        .form-submit .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .contact-highlights {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .highlight-item {
+            padding: 32px;
+            background: var(--cream);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .highlight-item h4 {
+            font-size: 1.1rem;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .highlight-item p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            padding: 48px 0 32px;
+            color: var(--white);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-brand {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .footer-brand span {
+            color: var(--accent);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+            transition: background 0.2s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            color: var(--navy);
+        }
+
+        .footer-bottom {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 900px) {
+            .about-grid,
+            .location-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-card:nth-child(5) {
+                grid-column: 1;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-stats {
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 100px 20px 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+            }
+
+            .btn {
+                justify-content: center;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pull-quote {
+                padding: 30px;
+            }
+
+            .pull-quote p {
+                font-size: 1.15rem;
+            }
+
+            .testimonial-card {
+                padding: 28px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Page Load Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="logo">Frank's <span>Auto</span></a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#location">Location</a></li>
+                <li>
+                    <a href="tel:+12814217888" class="nav-phone">
+                        <i class="fas fa-phone"></i>
+                        (281) 421-7888
+                    </a>
+                </li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Trusted Tire & Auto Service in Baytown</h1>
+                <p class="fade-in delay-1">Fast, affordable repairs. Honest service. Over 10 years of keeping Baytown drivers safe on the road.</p>
+                <div class="hero-ctas fade-in delay-2">
+                    <a href="tel:+12814217888" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        Call Now
+                    </a>
+                    <a href="#location" class="btn btn-secondary">
+                        Get Directions
+                    </a>
+                </div>
+                <div class="hero-stats fade-in delay-3">
+                    <div class="stat">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Years Serving Baytown</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">90+</div>
+                        <div class="stat-label">Customer Reviews</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">Minute Avg. Repair</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What We Do</span>
+                <h2 class="section-title">Complete Tire & Auto Solutions</h2>
+                <p class="section-subtitle">From quick flat repairs to full tire installations — we handle it all. No appointments needed, just walk in.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>New Tire Sales</h3>
+                    <p>All major brands available for passenger cars, trucks, and SUVs at competitive prices.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Used Tire Sales</h3>
+                    <p>Quality pre-owned tires at budget-friendly prices. Great value for reliable performance.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Flat Tire Repair</h3>
+                    <p>Quick plugs and patches while you wait. Most repairs done in about 10 minutes.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Tire Repair & Patching</h3>
+                    <p>Professional radial patches and repairs. Fast turnaround gets you back on the road.</p>
+                </div>
+                <div class="service-item">
+                    <h3>State/DOT Inspections</h3>
+                    <p>Official Texas state vehicle inspections. Quick service, no appointment needed.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Heavy Duty Tires</h3>
+                    <p>Off-road and work vehicle tires. We stock specialty sizes that chain stores often don't carry.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Wheel Balancing & Mounting</h3>
+                    <p>Professional tire installation with precise wheel balancing for a smooth ride.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Emergency Services</h3>
+                    <p>Stranded with a flat? We help drivers in emergencies — quick fixes when you need them most.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Free Air Pressure Checks</h3>
+                    <p>Stop by anytime for a free tire pressure check. We top off your tires at no charge to keep you safe on the road.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>A Baytown Institution for Over a Decade</h2>
+                    <p>Frank's Auto Solutions is a no-nonsense tire shop on N Main Street that's earned the loyalty of local drivers through straightforward service and fair pricing.</p>
+                    <p>Despite the name, the staff has built a reputation for honesty and reliability over more than ten years — customers who started coming a decade ago still trust Frank's for everything from quick flat repairs to full tire replacements.</p>
+                    <p>The shop doesn't promise flash, just results: radial patches in ten minutes, inspections without the wait, and tires that fit both your vehicle and your budget.</p>
+                </div>
+                <div class="pull-quote">
+                    <p>Frank's has always done us right.</p>
+                    <cite>— Loyal Customer, 10+ Years</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Customer Reviews</span>
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Don't take our word for it — here's what Baytown drivers have to say about their experience at Frank's.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <p>Frank's has always done us right, we have been coming here for about ten years. When I got a slow leak while out running errands with a baby, they fixed it while I was in the car with the air on.</p>
+                    </div>
+                    <div class="testimonial-author">— MapQuest Review</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <p>I got a nail in one of my tires and my low tire sensor came on...so I brought it to Franks, and they fixed it with a radial patch in about 10 minutes! Almost as soon as I pulled up...they were ready to help.</p>
+                    </div>
+                    <div class="testimonial-author">— Yahoo Local Review</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <p>I went here to get my leaky tire fixed and it was all good. None of the guys that work there are named Frank. I know bummer. But, my cost was 10 dollars or 12 with credit card.</p>
+                    </div>
+                    <div class="testimonial-author">— MapQuest Review</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <p>really needed help I work in baytown and told the guy I live an hour and a half away if he can please help me i needed a plug and is the only place I know that was close by</p>
+                    </div>
+                    <div class="testimonial-author">— Yahoo Local Review</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <p>This tire shop is a place i would recommend to anyone tht wants good quality service, staff tht are concerned abt costumer satisfaction and at a reasonable affordable price.</p>
+                    </div>
+                    <div class="testimonial-author">— PreferredMechanic Review</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location" id="location">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Visit Us</span>
+                <h2 class="section-title">Find Frank's Auto Solutions</h2>
+            </div>
+            <div class="location-grid">
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.532618927456!2d-94.9764!3d29.7592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x863f7a0138c20c91%3A0x8c3c0d2d0d9a7c9c!2s4930%20N%20Main%20St%2C%20Baytown%2C%20TX%2077521!5e0!3m2!1sen!2sus!4v1234567890"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Frank's Auto Solutions Location">
+                    </iframe>
+                </div>
+                <div class="location-info">
+                    <h3>4930 N Main St, Baytown, TX 77521</h3>
+                    <p>Located on N Main Street in Baytown. Easy access from Highway 146 and FM 565. Plenty of parking available.</p>
+                    
+                    <div class="info-block">
+                        <h4>Business Hours</h4>
+                        <ul class="hours-list">
+                            <li><span>Monday</span><span>8:00 AM – 6:00 PM</span></li>
+                            <li><span>Tuesday</span><span>8:00 AM – 6:00 PM</span></li>
+                            <li><span>Wednesday</span><span>8:00 AM – 6:00 PM</span></li>
+                            <li><span>Thursday</span><span>8:00 AM – 6:00 PM</span></li>
+                            <li><span>Friday</span><span>8:00 AM – 6:00 PM</span></li>
+                            <li><span>Saturday</span><span>8:00 AM – 4:00 PM</span></li>
+                            <li class="closed"><span>Sunday</span><span>Closed</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block">
+                        <h4>Contact</h4>
+                        <div class="contact-row">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+12814217888">(281) 421-7888</a>
+                        </div>
+                        <div class="contact-row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Frank's+Auto+Solutions+Baytown+TX" target="_blank" rel="noopener">Get Directions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h2>Need Service? Stop By or Call</h2>
+                    <p>No appointment needed for most services. Walk in and we'll get you taken care of. Or fill this out and we'll reach out.</p>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service...</option>
+                                <option value="flat-repair">Flat Tire Repair</option>
+                                <option value="new-tires">New Tires</option>
+                                <option value="used-tires">Used Tires</option>
+                                <option value="inspection">State Inspection</option>
+                                <option value="balancing">Wheel Balancing</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message (Optional)</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your needs..."></textarea>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">Send Request</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-highlights">
+                    <div class="highlight-item">
+                        <h4>Fast Service</h4>
+                        <p>Most flat repairs completed in about 10 minutes. No waiting around — we get you back on the road quickly.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h4>Affordable Pricing</h4>
+                        <p>Flat repairs from $10-$12. Competitive prices on all tires. We work with your budget.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h4>Walk-Ins Welcome</h4>
+                        <p>No appointment needed for most services. Just pull up and we'll take care of you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">Frank's <span>Auto</span></div>
+                <ul class="footer-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#location">Location</a></li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FRANKSSHOPP/" target="_blank" rel="noopener" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Frank's Auto Solutions & Tire Shop. All rights reserved. | 4930 N Main St, Baytown, TX 77521</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "Frank's Auto Solutions & Tire Shop",
+        "image": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "4930 N Main St",
+            "addressLocality": "Baytown",
+            "addressRegion": "TX",
+            "postalCode": "77521",
+            "addressCountry": "US"
+        },
+        "telephone": "+12814217888",
+        "priceRange": "$$",
+        "openingHours": ["Mo-Fr 08:00-18:00", "Sa 08:00-16:00"],
+        "rating": {
+            "@type": "Rating",
+            "ratingValue": "4.2",
+            "bestRating": "5",
+            "ratingCount": "86"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                },
+                "text": "Frank's has always done us right, we have been coming here for about ten years.",
+                "author": {
+                    "@type": "Person",
+                    "name": "MapQuest Reviewer"
+                }
+            }
+        ]
+    }
+    </script>
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            
+            // Show success message (in production, you'd send to a backend)
+            alert(`Thanks, ${name}! We'll contact you at ${phone} about ${service || 'your request'} shortly.`);
+            this.reset();
+        });
+
+        // Mobile menu toggle (placeholder)
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '100%';
+            navLinks.style.left = '0';
+            navLinks.style.right = '0';
+            navLinks.style.background = 'white';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.padding = '20px';
+            navLinks.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+        });
+    </script>
+</body>
+</html>
